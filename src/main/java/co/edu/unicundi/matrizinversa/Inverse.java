@@ -37,12 +37,9 @@ public class Inverse {
     private double[][] calculateAdjointMatrix(double determinante, int matrix[][]) {
         
         double[][] matrizInversa = new double[3][3];
-        
-        
         for(int i = 0; i < 3; i++){
             for(int j = 0; j< 3; j++) {
                 double[][] matrizDet = new double[2][2];
-                double detValor;
                 for(int k = 0; k<3;k++) {
                     if(k!=i) {
                         for(int l=0;l<3;l++) {
@@ -54,17 +51,11 @@ public class Inverse {
                         }
                     }
                 }
-
-
         matrizInversa[i][j]= (double)Math.pow(-1,j+i+2)*((matrizDet[0][0]*matrizDet[1][1])-(matrizDet[0][1]*matrizDet[1][0]));
-                        
-
             }
         }
-        
         transposedMatrix(matrizInversa);
         return matrizInversa;
-        
     }
     
     public double[][] calculateInverseMatrix(double determinante, int matrix[][]) {
