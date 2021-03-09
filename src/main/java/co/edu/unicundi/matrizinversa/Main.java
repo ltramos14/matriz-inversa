@@ -19,6 +19,9 @@ public class Main {
      * Constructor de la clase Main
      */
     public Main() {
+        /**
+         * Objeto inicializado para llenar la matriz digitada
+         */
         Matrix matrix = new Matrix();
         matrix.fillMatrix();
     }

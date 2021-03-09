@@ -29,9 +29,13 @@ public class Inverse {
      */
     private double[][] transposedMatrix(int matrix[][]){
        
-       //Variable que intercala las posiciones de la matriz original
+       /**
+        * Variable que intercala las posiciones de la matriz original
+        */
        int auxiliar;
-       //Variable en donde se va a almacenar la matriz transpuesta
+       /**
+        * Variable en donde se va a almacenar la matriz transpuesta
+        */
        double transposedMatrix[][];
        
        for(int i = 0; i < 3; i++) {
@@ -60,13 +64,19 @@ public class Inverse {
         for(int i = 0; i < 3; i++) {       
             for(int j = 0; j < 3; j++) {
                 
-                //Variable que almacena los cofactores de la matriz periodicamente
+                /**
+                 * Variable que almacena los cofactores de la matriz periodicamente
+                 */
                 double[][] cofactorMatrix = new double[2][2];
                 
                 for(int k = 0; k < 3; k++) {
                     if(k != i) {
                         for(int l = 0; l < 3; l++) {
                             if(l != j) {
+                                /**
+                                 * Variable index1 filas de la matriz de cofactores
+                                 * Variable index2 columnas de la matriz de cofactores
+                                 */
                                 int index1 = k < i ? k : k-1;
                                 int index2 = l < j ? l : l-1;
                                 cofactorMatrix[index1][index2] = matrix[k][l];
