@@ -22,20 +22,25 @@ public class Determinant {
     public Determinant() {
     }
     
-    public double calculateDeterminant(int matrix[][]) {
+    /**
+     * Método que calcula la magnitud de la matriz por medio de sus diagonales
+     * @param matrix Matriz original ingresada en consola
+     * @return la magnitud calculada de la matriz original
+     */
+    public double calculateMagnitude(int matrix[][]) {
         
+    //Variable que almacena los calculos de las diagonales derechas de la matriz
         int leftDiagonal = (matrix[0][0] * matrix[1][1] * matrix[2][2]) + 
                            (matrix[1][0] * matrix[2][1] * matrix[0][2]) + 
                            (matrix[2][0] * matrix[0][1] * matrix[1][2]); 
         
+    //Variable que almacena los calculos de las diagonales izquierdas de la matriz
         int rightDiagonal = (matrix[0][2] * matrix[1][1] * matrix[2][0]) + 
                             (matrix[1][2] * matrix[2][1] * matrix[0][0]) + 
                             (matrix[2][2] * matrix[0][1] * matrix[1][0]); 
         
         int magnitude  = leftDiagonal - rightDiagonal;
         
-        return magnitude;
-        
-    }
-      
+        return magnitude;     
+    }      
 }

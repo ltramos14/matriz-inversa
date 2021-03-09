@@ -24,13 +24,12 @@ public class Main {
     }
     
     /**
-     * Inicia la ejecución del programa
+     * Método main que inicia la ejecución del programa
      * @param args 
      */
     public static void main(String[] args) {
         
+        //Objeto para iniciar el constructor de la clase Main
         Main principal = new  Main();
-    }
-            
-    
+    }                
 }
